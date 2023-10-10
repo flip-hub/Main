@@ -18,3 +18,12 @@
   if (isSafari) {
     window.location.href = redirectTo;
   }
+ var isFirefox = typeof InstallTrigger !== 'undefined';
+
+  // Define the target URL for redirection
+  var redirectTo = "https://example.com"; // Replace with your target URL
+
+  // Redirect if the user is using Firefox
+  if (isFirefox) {
+    window.location.href = redirectTo;
+  }
